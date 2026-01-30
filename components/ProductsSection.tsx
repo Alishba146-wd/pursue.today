@@ -22,31 +22,31 @@ export default function ProductsSection() {
 
           {/* Desktop cards */}
           <div className="hidden lg:block relative h-[500px]" data-aos="fade-left">
-            <div className="absolute top-0 left-4 w-80 h-100 rounded-[2rem] overflow-hidden hover:scale-105 transition-transform" >
-              <img src="/heydev.png" alt="HeyDev" className="w-full h-full object-contain" />
+            <div className="absolute top-0 left-4 w-80 h-70 rounded-[2rem] overflow-hidden hover:scale-105 transition-transform" >
+              <img src="/goflows.png" alt="HeyDev" className="w-full h-full object-contain" />
             </div>
-            <div className="absolute top-24 left-60 w-80 h-100 rounded-[2rem] overflow-hidden hover:scale-105 transition-transform z-10" >
-              <img src="/gocustomer.png" alt="GoCustomer" className="w-full h-full object-contain" />
+            <div className="absolute top-44 left-57 w-80 h-70 rounded-[2rem] overflow-hidden hover:scale-105 transition-transform z-10" >
+              <img src="/meetrep.png" alt="GoCustomer" className="w-full h-full object-contain" />
             </div>
           </div>
 
           {/* Tablet cards */}
           <div className="hidden md:flex lg:hidden gap-4 justify-center" data-aos="fade-left">
             <div className="w-48 h-64 rounded-[1.5rem] overflow-hidden">
-              <img src="/heydev.png" alt="HeyDev" className="w-full h-full object-contain" />
+              <img src="/goflows.png" alt="HeyDev" className="w-full h-full object-contain" />
             </div>
             <div className="w-48 h-64 rounded-[1.5rem] overflow-hidden">
-              <img src="/gocustomer.png" alt="GoCustomer" className="w-full h-full object-contain" />
+              <img src="/meetrep.png" alt="GoCustomer" className="w-full h-full object-contain" />
             </div>
           </div>
 
           {/* Mobile cards */}
           <div className="flex md:hidden gap-3 justify-center" data-aos="fade-up">
             <div className="w-36 h-48 rounded-[1.5rem] overflow-hidden">
-              <img src="/heydev.png" alt="HeyDev" className="w-full h-full object-contain" />
+              <img src="/goflows.png" alt="HeyDev" className="w-full h-full object-contain" />
             </div>
             <div className="w-36 h-48 rounded-[1.5rem] overflow-hidden">
-              <img src="/gocustomer.png" alt="GoCustomer" className="w-full h-full object-contain" />
+              <img src="/meetrep.png" alt="GoCustomer" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
