@@ -9,12 +9,10 @@ export default function AboutSection() {
           <div className="h-0.5" style={{ width: 'calc(100% - 1.2em)', maxWidth: '180px', backgroundColor: 'rgba(255,255,255,0.5)' }}></div>
         </div>
         <h2 className="text-2xl md:text-3xl lg:text-4xl text-white mb-8 leading-tight font-semibold">
-          Build, Innovate and Experience<br />
-          the future with <span className="italic">Pursue Today</span>
+          Build, Innovate and Experience the future with<br /><span className="italic">Pursue Today</span>
         </h2>
         <p className="text-sm lg:text-base text-white leading-relaxed max-w-2xl mx-auto font-normal">
-          &ldquo;We believe in the power of seizing the opportunity and building the future. So<br />
-          you work on the conception, we&apos;ll work on making it a reality&rdquo;
+          &ldquo;We believe in the power of seizing the opportunity and building the future. So you work on the conception, we&apos;ll work on making it a reality&rdquo;
         </p>
       </div>
     </section>

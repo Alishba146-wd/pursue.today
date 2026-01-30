@@ -10,12 +10,9 @@ export default function ProductsSection() {
               Our <span style={{ color: '#0264B8', fontStyle: 'italic' }}>Products</span>
             </h1>
             <p className="text-sm md:text-base lg:text-lg mb-8 leading-relaxed" style={{ color: '#000000', fontWeight: '500' }}>
-              Create opportunities for yourself using our products<br />
-              ranging from software solutions and technological<br />
-              tools to the latest social networks, find everything<br />
-              you need here!
+              Create opportunities for yourself using our products ranging from software solutions and technological tools to the latest social networks, find everything you need here!
             </p>
-            <Button variant="outline" className="rounded-full px-5 py-1 text-sm font-semibold hover:scale-105 transition-transform" style={{ borderColor: '#0264B8', color: '#0264B8', borderWidth: '2px' }}>
+            <Button variant="outline" className="explore-btn rounded-full px-5 py-1 text-sm font-semibold hover:scale-105 transition-all" style={{ borderColor: '#0264B8', color: '#0264B8', borderWidth: '2px' }}>
               Explore More
             </Button>
           </div>
@@ -42,10 +39,10 @@ export default function ProductsSection() {
 
           {/* Mobile cards */}
           <div className="flex md:hidden gap-3 justify-center" data-aos="fade-up">
-            <div className="w-36 h-48 rounded-[1.5rem] overflow-hidden">
+            <div className="w-[40%] max-w-36 h-48 rounded-[1.5rem] overflow-hidden">
               <img src="/goflows.png" alt="HeyDev" className="w-full h-full object-contain" />
             </div>
-            <div className="w-36 h-48 rounded-[1.5rem] overflow-hidden">
+            <div className="w-[40%] max-w-36 h-48 rounded-[1.5rem] overflow-hidden">
               <img src="/meetrep.png" alt="GoCustomer" className="w-full h-full object-contain" />
             </div>
           </div>

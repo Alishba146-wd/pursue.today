@@ -54,3 +54,8 @@ body {
 [data-next-badge] {
   display: none !important;
 }
+
+.explore-btn:hover {
+  background-color: #0264B8 !important;
+  color: white !important;
+}
