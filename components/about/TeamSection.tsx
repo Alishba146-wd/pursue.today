@@ -58,7 +58,7 @@ export default function TeamSection() {
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-4 -mt-10">
+        <div className="text-center mb-4 -mt-10" data-aos="fade-up">
           <h2 className="text-5xl lg:text-6xl font-bold" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}>
             Amazing <span className="italic" style={{ color: '#2C7BBD' }}>Team</span>
           </h2>
@@ -69,7 +69,7 @@ export default function TeamSection() {
         </p>
 
         {/* Team Carousel */}
-        <div className="rounded-2xl lg:rounded-3xl border border-[#0264B8]/20 p-4 sm:p-6 lg:p-10 relative">
+        <div data-aos="fade-up" className="rounded-2xl lg:rounded-3xl border border-[#0264B8]/20 p-4 sm:p-6 lg:p-10 relative">
           <div
             ref={scrollRef}
             className="flex gap-4 sm:gap-6 lg:gap-8 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory"

@@ -10,7 +10,7 @@ export default function OurGoalSection() {
     >
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         {/* Left - Text Card */}
-        <div className="w-full lg:flex-1">
+        <div className="w-full lg:flex-1" data-aos="fade-right">
           <div className="rounded-2xl border border-[#0264B8]/30 p-8 lg:p-10">
             <div className="inline-block">
               <h2 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide" style={{ color: '#2C7BBD', fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}>
@@ -26,7 +26,7 @@ export default function OurGoalSection() {
         </div>
 
         {/* Right - Image */}
-        <div className="w-full lg:flex-1 flex justify-center lg:justify-end">
+        <div className="w-full lg:flex-1 flex justify-center lg:justify-end" data-aos="fade-left">
           <div className="rounded-2xl overflow-hidden border-2 border-[#0264B8]/30 w-full h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[400px] relative">
             <Image
               src="/our goal.png"

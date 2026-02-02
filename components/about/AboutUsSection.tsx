@@ -10,7 +10,7 @@ export default function AboutUsSection() {
     >
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         {/* Left - Text */}
-        <div className="flex-1 text-left">
+        <div className="flex-1 text-left" data-aos="fade-right">
           <h2 className="text-6xl lg:text-7xl font-semibold mb-6" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}>
             About <span style={{ color: '#2C7BBD' }} className="italic">Us</span>
           </h2>
@@ -26,7 +26,7 @@ export default function AboutUsSection() {
         </div>
 
         {/* Right - Image */}
-        <div className="flex-1 flex justify-center lg:justify-end">
+        <div className="flex-1 flex justify-center lg:justify-end" data-aos="fade-left">
           <div className="rounded-2xl border-2 border-[#0264B8] overflow-hidden w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] relative">
             <Image
               src="/about us.png"
