@@ -14,7 +14,7 @@ export default function AboutUsSection() {
           <h2 className="text-6xl lg:text-7xl font-semibold mb-6" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}>
             About <span style={{ color: '#2C7BBD' }} className="italic">Us</span>
           </h2>
-          <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-lg">
+          <p className="text-base lg:text-lg text-gray-700 leading-relaxed max-w-lg">
             With our cutting edge products and highly skilled team of engineers we work on engineering a new tomorrow for businesses as well as individuals
           </p>
           <p

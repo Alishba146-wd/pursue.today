@@ -6,7 +6,7 @@ export default function WhatWeDoSection() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         {/* Left - Image */}
         <div className="flex-1 flex justify-center lg:justify-start" data-aos="fade-right">
-          <div className="rounded-2xl overflow-hidden border-2 border-white/30 w-[350px] h-[350px] lg:w-[450px] lg:h-[400px] relative">
+          <div className="rounded-2xl overflow-hidden border-2 border-white/30 w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[400px] relative">
             <Image
               src="/what we do.png"
               alt="Team working together"
