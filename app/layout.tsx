@@ -1,11 +1,19 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
-import AOSInit from '@/components/AOSInit';
+import { Poppins, Bebas_Neue } from 'next/font/google';
+import AOSInit from '@/components/common/AOSInit';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-bebas',
 });
 
 export const metadata: Metadata = {
@@ -20,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}><AOSInit />{children}</body>
+      <body className={`${poppins.className} ${bebasNeue.variable}`}><AOSInit /><Header />{children}<Footer /></body>
     </html>
   );
 }

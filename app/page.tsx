@@ -1,23 +1,19 @@
 'use client';
 
-import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
-import ScrollingTicker from '@/components/ScrollingTicker';
-import ProductsSection from '@/components/ProductsSection';
-import AboutSection from '@/components/AboutSection';
-import ServicesSection from '@/components/ServicesSection';
-import Footer from '@/components/Footer';
+import HeroSection from '@/components/home/HeroSection';
+import ScrollingTicker from '@/components/common/ScrollingTicker';
+import ProductsSection from '@/components/home/ProductsSection';
+import AboutSection from '@/components/home/AboutSection';
+import ServicesSection from '@/components/home/ServicesSection';
 
 export default function Home() {
   return (
     <div className="min-h-screen" style={{ color: '#000000' }}>
-      <Header />
       <HeroSection />
       <ScrollingTicker />
       <ProductsSection />
       <AboutSection />
       <ServicesSection />
-      <Footer />
     </div>
   );
 }

@@ -3,10 +3,19 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/button';
+import { usePathname } from 'next/navigation';
+import { Button } from '@/components/common/button';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: '/about', label: 'About Us' },
+    { href: '/services', label: 'Services' },
+    { href: '/products', label: 'Products' },
+    { href: '/careers', label: 'Careers' },
+  ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
@@ -15,18 +24,11 @@ export default function Header() {
 
           {/* Left - Nav Links (desktop) */}
           <nav className="hidden lg:flex items-center gap-8">
-            <Link href="/about" className="text-sm font-medium text-gray-800 hover:text-black transition">
-              About Us
-            </Link>
-            <Link href="/services" className="text-sm font-medium text-gray-800 hover:text-black transition">
-              Services
-            </Link>
-            <Link href="/products" className="text-sm font-medium text-gray-800 hover:text-black transition">
-              Products
-            </Link>
-            <Link href="/careers" className="text-sm font-medium text-gray-800 hover:text-black transition">
-              Careers
-            </Link>
+            {navLinks.map(({ href, label }) => (
+              <Link key={href} href={href} className={`text-sm font-medium transition ${pathname === href ? 'text-black underline underline-offset-4 decoration-2' : 'text-gray-800 hover:text-black'}`}>
+                {label}
+              </Link>
+            ))}
           </nav>
 
           {/* Hamburger button (mobile) */}
@@ -73,18 +75,11 @@ export default function Header() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4">
-          <Link href="/about" className="block text-sm font-medium text-gray-800 hover:text-black transition" onClick={() => setMenuOpen(false)}>
-            About Us
-          </Link>
-          <Link href="/services" className="block text-sm font-medium text-gray-800 hover:text-black transition" onClick={() => setMenuOpen(false)}>
-            Services
-          </Link>
-          <Link href="/products" className="block text-sm font-medium text-gray-800 hover:text-black transition" onClick={() => setMenuOpen(false)}>
-            Products
-          </Link>
-          <Link href="/careers" className="block text-sm font-medium text-gray-800 hover:text-black transition" onClick={() => setMenuOpen(false)}>
-            Careers
-          </Link>
+          {navLinks.map(({ href, label }) => (
+            <Link key={href} href={href} className={`block text-sm font-medium transition ${pathname === href ? 'text-black underline underline-offset-4 decoration-2' : 'text-gray-800 hover:text-black'}`} onClick={() => setMenuOpen(false)}>
+              {label}
+            </Link>
+          ))}
           <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
             <a href="https://www.linkedin.com/company/pursuetoday/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
               <Image src="/linkedIn.png" alt="LinkedIn" width={24} height={24} />

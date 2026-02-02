@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="py-20 md:py-45 relative overflow-hidden" style={{ backgroundColor: '#0264B8' }}>
+    <section className="py-20 md:py-45 relative overflow-hidden" style={{ backgroundColor: '#2C7BBD' }}>
       <img src="/element.png" alt="" className="hidden md:block absolute top-10 left-0 w-110 opacity-60" />
       <img src="/element.png" alt="" className="hidden md:block absolute bottom-5 right-0 w-110 opacity-60" style={{ transform: 'rotate(180deg)' }} />
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="fade-up">

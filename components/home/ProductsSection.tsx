@@ -1,4 +1,4 @@
-import { Button } from '@/components/button';
+import { Button } from '@/components/common/button';
 
 export default function ProductsSection() {
   return (
@@ -6,13 +6,13 @@ export default function ProductsSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div data-aos="fade-right">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ lineHeight: '1.2', color: '#000000' }}>
-              Our <span style={{ color: '#0264B8', fontStyle: 'italic' }}>Products</span>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ lineHeight: '1.2', color: '#000000', fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}>
+              Our <span style={{ color: '#2C7BBD', fontStyle: 'italic' }}>Products</span>
             </h1>
             <p className="text-sm md:text-base lg:text-lg mb-8 leading-relaxed" style={{ color: '#000000', fontWeight: '500' }}>
               Create opportunities for yourself using our products ranging from software solutions and technological tools to the latest social networks, find everything you need here!
             </p>
-            <Button variant="outline" className="explore-btn rounded-full px-5 py-1 text-sm font-semibold hover:scale-105 transition-all" style={{ borderColor: '#0264B8', color: '#0264B8', borderWidth: '2px' }}>
+            <Button variant="outline" className="explore-btn rounded-full px-5 py-1 text-sm font-semibold hover:scale-105 transition-all" style={{ borderColor: '#2C7BBD', color: '#2C7BBD', borderWidth: '2px' }}>
               Explore More
             </Button>
           </div>
