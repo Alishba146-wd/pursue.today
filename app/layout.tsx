@@ -29,6 +29,11 @@ const conthrax = localFont({
   weight: '600',
 });
 
+const cascadiaMono = localFont({
+  src: '../public/font/CascadiaMono-VariableFont_wght.ttf',
+  variable: '--font-cascadia',
+});
+
 export const metadata: Metadata = {
   title: 'Pursue Today - We Engineer The Future',
   description: 'We provide your team with the tools to succeed in today\'s world and beyond. Build, Innovate and Experience the future with Pursue Today.',
@@ -41,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} ${bebasNeue.variable} ${orbitron.variable} ${conthrax.variable}`}><AOSInit /><Header />{children}<Footer /></body>
+      <body className={`${poppins.className} ${bebasNeue.variable} ${orbitron.variable} ${conthrax.variable} ${cascadiaMono.variable}`}><AOSInit /><Header />{children}<Footer /></body>
     </html>
   );
 }

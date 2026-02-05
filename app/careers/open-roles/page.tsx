@@ -540,40 +540,47 @@ const jobs = [
 
 export default function OpenRoles() {
   const [selectedJob, setSelectedJob] = useState(jobs[0]);
+  const [showDetails, setShowDetails] = useState(false);
+
+  const handleJobClick = (job: typeof jobs[0]) => {
+    setSelectedJob(job);
+    setShowDetails(true);
+  };
+
+  const handleBack = () => {
+    setShowDetails(false);
+  };
 
   return (
     <div className="min-h-screen bg-white pt-16 lg:pt-[88px]">
-      {/* Header Section */}
-      <section className="py-12 md:py-16 px-4 text-center">
+      {/* Header Section - Hide on mobile when showing details */}
+      <section className={`py-8 md:py-16 px-4 text-center ${showDetails ? 'hidden md:block' : ''}`}>
         <h1
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-wide"
           style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.01em" }}
-          data-aos="fade-up"
         >
           <span className="text-black">OPEN </span>
           <span className="text-[#2C7BBD] italic">ROLES</span>
         </h1>
         <p
           className="text-base md:text-lg text-gray-700"
-          data-aos="fade-up"
-          data-aos-delay="100"
         >
           Be part of something exciting
         </p>
       </section>
 
       {/* Main Content */}
-      <section className="px-2 md:px-4 pb-20 max-w-7xl mx-auto">
-        <div className="flex flex-row gap-2 md:gap-6">
-          {/* Left Sidebar - Job Listings */}
+      <section className="px-4 md:px-4 pb-20 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+
+          {/* Left Sidebar - Job Listings (Hide on mobile when showing details) */}
           <div
-            className="w-[120px] md:w-[280px] lg:w-[320px] flex-shrink-0 space-y-2 md:space-y-4 max-h-[70vh] md:max-h-[80vh] overflow-y-auto hide-scrollbar"
-            data-aos="fade-right"
+            className={`w-full md:w-[280px] lg:w-[340px] flex-shrink-0 space-y-3 md:space-y-4 md:max-h-[80vh] md:overflow-y-auto blue-scrollbar md:pr-4 lg:pr-6 ${showDetails ? 'hidden md:block' : ''}`}
           >
             {jobs.map((job) => (
               <div
                 key={job.id}
-                onClick={() => setSelectedJob(job)}
+                onClick={() => handleJobClick(job)}
                 className={`cursor-pointer rounded-xl md:rounded-2xl overflow-hidden border-2 transition-all hover:shadow-lg ${
                   selectedJob.id === job.id
                     ? "border-[#2C7BBD]"
@@ -582,18 +589,26 @@ export default function OpenRoles() {
               >
                 {/* Blue Header */}
                 <div
-                  className="px-2 py-2 md:px-4 md:py-4"
-                  style={{ backgroundColor: "#2C7BBD" }}
+                  className="px-4 py-3 md:px-4 md:py-4 transition-colors"
+                  style={{ backgroundColor: selectedJob.id === job.id ? "#2C7BBD" : "#A1D6F7" }}
                 >
-                  <h3 className="text-white font-semibold text-[10px] md:text-base lg:text-lg leading-tight">
+                  <h3
+                    className="font-semibold text-base md:text-base lg:text-lg leading-tight transition-colors"
+                    style={{ color: selectedJob.id === job.id ? "white" : "#2C7BBD" }}
+                  >
                     {job.title}
                   </h3>
-                  <p className="text-white/90 text-[8px] md:text-xs lg:text-sm mt-0.5 leading-tight line-clamp-1">{job.department}</p>
+                  <p
+                    className="text-sm md:text-xs lg:text-sm mt-0.5 leading-tight transition-colors"
+                    style={{ color: selectedJob.id === job.id ? "rgba(255,255,255,0.9)" : "#2C7BBD" }}
+                  >
+                    {job.department}
+                  </p>
                 </div>
                 {/* White Footer */}
-                <div className="px-2 py-1.5 md:px-4 md:py-3 bg-white flex items-center gap-1 md:gap-2">
+                <div className="px-4 py-2 md:px-4 md:py-3 bg-white flex items-center gap-2">
                   <svg
-                    className="w-2.5 h-2.5 md:w-4 md:h-4 text-gray-600 flex-shrink-0"
+                    className="w-4 h-4 text-gray-600 flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -603,26 +618,45 @@ export default function OpenRoles() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-gray-600 text-[8px] md:text-xs lg:text-sm line-clamp-1">{job.type}</span>
+                  <span className="text-gray-600 text-sm md:text-xs lg:text-sm">{job.type}</span>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Right Content - Job Details */}
+          {/* Right Content - Job Details (Show on mobile only when showDetails is true) */}
           <div
-            className="flex-1 border-2 border-[#2C7BBD] rounded-xl md:rounded-2xl p-3 md:p-6 lg:p-8 max-h-[70vh] md:max-h-[80vh] overflow-y-auto hide-scrollbar"
-            data-aos="fade-left"
+            className={`flex-1 border-2 border-[#2C7BBD] rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 md:max-h-[80vh] md:overflow-y-auto hide-scrollbar ${showDetails ? 'block' : 'hidden md:block'}`}
           >
+            {/* Back Button - Mobile Only */}
+            <button
+              onClick={handleBack}
+              className="md:hidden flex items-center gap-2 text-[#2C7BBD] font-semibold mb-4"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              Back to all jobs
+            </button>
             {/* Job Title & Apply Button */}
-            <div className="text-center mb-4 md:mb-8 pb-4 md:pb-8 border-b border-gray-200">
-              <h2 className="text-sm md:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 md:mb-2">
+            <div className="text-center mb-6 md:mb-8 pb-6 md:pb-8 border-b border-gray-200">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
                 {selectedJob.title}
               </h2>
-              <p className="text-gray-600 text-[10px] md:text-sm mb-3 md:mb-6">{selectedJob.department}</p>
+              <p className="text-gray-600 text-sm md:text-sm mb-4 md:mb-6">{selectedJob.department}</p>
               <a href={`mailto:${selectedJob.email}?subject=Application for ${selectedJob.title}`}>
                 <Button
-                  className="rounded-full px-4 py-2 md:px-10 md:py-6 text-[10px] md:text-sm font-semibold hover:scale-105 transition-all"
+                  className="rounded-full px-8 py-3 md:px-10 md:py-6 text-sm font-semibold hover:scale-105 transition-all"
                   style={{
                     backgroundColor: "#2C7BBD",
                     color: "white",
@@ -635,22 +669,22 @@ export default function OpenRoles() {
 
             {/* Description */}
             {selectedJob.description && (
-              <div className="mb-4 md:mb-8">
-                <p className="text-gray-600 text-[10px] md:text-sm leading-relaxed whitespace-pre-line">
+              <div className="mb-6 md:mb-8">
+                <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-line">
                   {selectedJob.description}
                 </p>
               </div>
             )}
 
             {/* Responsibilities */}
-            <div className="mb-4 md:mb-8">
-              <h3 className="text-xs md:text-lg font-semibold text-gray-900 mb-2 md:mb-4">
+            <div className="mb-6 md:mb-8">
+              <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
                 Responsibilities
               </h3>
-              <ul className="space-y-1.5 md:space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {selectedJob.responsibilities.map((item, index) => (
-                  <li key={index} className="text-gray-600 text-[10px] md:text-sm leading-relaxed flex">
-                    <span className="mr-1 md:mr-2">•</span>
+                  <li key={index} className="text-gray-600 text-sm leading-relaxed flex">
+                    <span className="mr-2">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -658,14 +692,14 @@ export default function OpenRoles() {
             </div>
 
             {/* Requirements */}
-            <div className="mb-4 md:mb-8">
-              <h3 className="text-xs md:text-lg font-semibold text-gray-900 mb-2 md:mb-4">
+            <div className="mb-6 md:mb-8">
+              <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
                 Requirements
               </h3>
-              <ul className="space-y-1.5 md:space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {selectedJob.requirements.map((item, index) => (
-                  <li key={index} className="text-gray-600 text-[10px] md:text-sm leading-relaxed flex">
-                    <span className="mr-1 md:mr-2">•</span>
+                  <li key={index} className="text-gray-600 text-sm leading-relaxed flex">
+                    <span className="mr-2">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -673,35 +707,35 @@ export default function OpenRoles() {
             </div>
 
             {/* Qualifications */}
-            <div className="mb-4 md:mb-8">
-              <h3 className="text-xs md:text-lg font-semibold text-gray-900 mb-2 md:mb-4">
+            <div className="mb-6 md:mb-8">
+              <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
                 Qualifications
               </h3>
-              <p className="text-gray-600 text-[10px] md:text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {selectedJob.qualifications}
               </p>
             </div>
 
             {/* Experience */}
-            <div className="mb-4 md:mb-8">
-              <h3 className="text-xs md:text-lg font-semibold text-gray-900 mb-2 md:mb-4">
+            <div className="mb-6 md:mb-8">
+              <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
                 Experience
               </h3>
-              <p className="text-gray-600 text-[10px] md:text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {selectedJob.experience}
               </p>
             </div>
 
             {/* Benefits (if available) */}
             {selectedJob.benefits && (
-              <div className="mb-4 md:mb-8">
-                <h3 className="text-xs md:text-lg font-semibold text-gray-900 mb-2 md:mb-4">
+              <div className="mb-6 md:mb-8">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
                   What We Offer
                 </h3>
-                <ul className="space-y-1 md:space-y-2">
+                <ul className="space-y-2">
                   {selectedJob.benefits.map((item, index) => (
-                    <li key={index} className="text-gray-600 text-[10px] md:text-sm leading-relaxed flex">
-                      <span className="mr-1 md:mr-2">•</span>
+                    <li key={index} className="text-gray-600 text-sm leading-relaxed flex">
+                      <span className="mr-2">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -710,11 +744,11 @@ export default function OpenRoles() {
             )}
 
             {/* How to Apply */}
-            <div className="mb-2 md:mb-4 p-2 md:p-4 bg-gray-50 rounded-lg md:rounded-xl">
-              <h3 className="text-xs md:text-lg font-semibold text-gray-900 mb-2 md:mb-4">
+            <div className="mb-4 p-4 bg-gray-50 rounded-xl">
+              <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">
                 How to Apply
               </h3>
-              <p className="text-gray-600 text-[10px] md:text-sm leading-relaxed whitespace-pre-line">
+              <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-line">
                 {selectedJob.howToApply}
               </p>
             </div>
