@@ -6,13 +6,13 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const teamMembers = [
   { name: 'Aurangzaib Ramzan', role: 'Sr.Software Engineer', image: '/ramzan.png' },
-  { name: 'Farzeen Akram', role: 'HR Manager', image: '/farzeen.png' },
+  { name: 'Farzeen Akram', role: 'Head of Talent and Culture', image: '/farzeenAkram.png' },
   { name: 'Muhammad Sheraz', role: 'Project Manager', image: '/sheraz.png' },
   { name: 'Shifa Quddus', role: 'QA Analyst', image: '/shifa.png' },
-  { name: 'Maryam Khalid', role: 'Growth Marketing Specialist', image: '' },
-  { name: 'Aleena Iqtidar', role: 'Head of Revenue Operations', image: '' },
-  { name: 'Muhammad Sheraz', role: 'Project Manager', image: '' },
-  { name: 'Gohar Younas', role: 'Sr. Python Developer', image: '' },
+  { name: 'Amna Mubashar', role: 'Python Developer', image: '/Amna Mubashar - Python Developer.png' },
+  { name: 'Momal Musa', role: 'Graphic Designer', image: '/Momal Musa- Graphic Designer.png' },
+  { name: 'Shoaib Mehmood', role: 'Node.Js Developer', image: '/Shoaib Mehmood-Node . Js Developer.png' },
+  { name: 'Syed Shahab Shah', role: 'Mern Stack Developer', image: '/Syed Shahab Shah - Mern Stack Developer.png' },
 ];
 
 export default function TeamSection() {

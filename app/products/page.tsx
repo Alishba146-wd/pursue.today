@@ -11,7 +11,7 @@ export default function ProductsPage() {
           alt="Our Products"
           width={800}
           height={300}
-          className="w-[340px] sm:w-[500px] lg:w-[800px] h-auto"
+          className="w-[240px] sm:w-[380px] lg:w-[580px] h-auto"
           data-aos="fade-up"
         />
       </div>
@@ -92,9 +92,9 @@ export default function ProductsPage() {
               <Image
                 src="/products-04.png"
                 alt="MeetRep.ai Logo"
-                width={300}
-                height={300}
-                className="w-[180px] sm:w-[220px] lg:w-[300px] h-auto"
+                width={250}
+                height={250}
+                className="w-[120px] sm:w-[150px] lg:w-[200px] h-auto"
               />
             </div>
           </div>
