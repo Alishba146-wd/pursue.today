@@ -17,12 +17,12 @@ export default function Careers() {
 
         <div className="relative z-10 max-w-8xl mx-auto flex flex-col items-center justify-center text-center mb-20">
           <h1
-            className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 tracking-wide italic"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 tracking-wide px-2"
             style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}
             data-aos="fade-up"
           >
-            <span className="text-black not-italic">JOIN OUR </span>
-            <span className="text-[#2C7BBD]">TEAM</span>
+            <span className="text-black">JOIN OUR </span>
+            <span className="text-[#2C7BBD] italic">TEAM</span>
           </h1>
 
           <p className="text-base md:text-xl text-black mb-8 max-w-2xl mx-auto font-medium opacity-90" data-aos="fade-up" data-aos-delay="100">
