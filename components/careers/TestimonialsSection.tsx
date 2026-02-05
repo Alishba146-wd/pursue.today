@@ -26,7 +26,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className="w-full mb-20 relative">
-      <div className="bg-[#0264B8] py-4 text-center mb-12">
+      <div className="bg-[#0264B8] py-4 text-center mb-12" data-aos="fade-up">
         <h2
           className="text-3xl md:text-4xl font-bold text-white tracking-widest"
           style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.01em" }}
@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
         </h2>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-12 relative flex items-center justify-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-12 relative flex items-center justify-center" data-aos="fade-up" data-aos-delay="100">
         <button
           onClick={prev}
           className="absolute -left-2 md:-left-8 top-1/2 -translate-y-1/2 w-12 h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors z-10"

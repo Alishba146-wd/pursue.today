@@ -63,7 +63,7 @@ export default function TeamSection() {
             Amazing <span className="italic" style={{ color: '#2C7BBD' }}>Team</span>
           </h2>
         </div>
-        <p className="text-center text-base lg:text-lg text-gray-800 mb-12">
+        <p className="text-center text-base lg:text-lg text-gray-800 mb-12" data-aos="fade-up" data-aos-delay="100">
           Great things in business are never done by one{' '}
           person. <strong>They&apos;re done by a team of people.</strong>
         </p>

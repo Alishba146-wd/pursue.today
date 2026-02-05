@@ -11,12 +11,14 @@ const images = [
 
 export default function ImageGallery() {
   return (
-    <div className="w-full overflow-x-auto pb-8 hide-scrollbar">
+    <div className="w-full overflow-x-auto pb-8 hide-scrollbar" data-aos="fade-up">
       <div className="flex space-x-6 px-4 md:px-8 min-w-max">
         {images.map((src, index) => (
           <div
             key={index}
             className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-3xl overflow-hidden shadow-lg flex-shrink-0"
+            data-aos="fade-left"
+            data-aos-delay={index * 100}
           >
             <Image
               src={src}

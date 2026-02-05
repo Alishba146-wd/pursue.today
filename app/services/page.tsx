@@ -14,7 +14,7 @@ export default function ServicesPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 flex items-center justify-center px-4">
+        <div className="absolute inset-0 flex items-center justify-center px-4" data-aos="fade-up">
           <Image
             src="/services-text.png"
             alt="Services"

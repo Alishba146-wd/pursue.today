@@ -18,12 +18,13 @@ export default function Careers() {
           <h1
             className="text-4xl md:text-5xl lg:text-7xl font-bold mb-4 tracking-wide italic"
             style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}
+            data-aos="fade-up"
           >
             <span className="text-black not-italic">JOIN OUR </span>
             <span className="text-[#0264B8]">TEAM</span>
           </h1>
 
-          <p className="text-base md:text-xl text-black mb-8 max-w-2xl mx-auto font-medium opacity-90">
+          <p className="text-base md:text-xl text-black mb-8 max-w-2xl mx-auto font-medium opacity-90" data-aos="fade-up" data-aos-delay="100">
             Take a step in the right direction for your career
           </p>
 
@@ -36,6 +37,8 @@ export default function Careers() {
               backgroundColor: "transparent",
               borderWidth: "2px",
             }}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             See Open Roles
           </Button>

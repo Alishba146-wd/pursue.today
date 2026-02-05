@@ -16,7 +16,7 @@ export default function AboutPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 flex items-center justify-center -mt-44 sm:-mt-60 lg:-mt-85 px-4">
+        <div className="absolute inset-0 flex items-center justify-center -mt-44 sm:-mt-60 lg:-mt-85 px-4" data-aos="fade-up">
           <Image
             src="/lets pursue today.png"
             alt="Let's Pursue Today to build a new tomorrow!"
