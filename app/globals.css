@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Conthrax';
+  src: url('/fonts/conthrax-sb.woff2') format('woff2'),
+       url('/fonts/conthrax-sb.woff') format('woff'),
+       url('/fonts/conthrax-sb.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 :root {
+  --font-conthrax: 'Conthrax', sans-serif;
   --background: 0 0% 100%;
   --foreground: 0 0% 3.9%;
   --card: 0 0% 100%;
@@ -79,5 +89,11 @@ body {
 }
 
 .animate-scroll-gallery {
-  animation: scroll-gallery 25s linear infinite;
+  animation: scroll-gallery 50s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .animate-scroll-gallery {
+    animation: scroll-gallery 50s linear infinite;
+  }
 }

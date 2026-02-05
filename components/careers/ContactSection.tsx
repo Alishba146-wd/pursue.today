@@ -5,7 +5,7 @@ export default function ContactSection() {
   return (
     <section className="w-full pb-32 pt-28 px-4 bg-[linear-gradient(90deg,#D6EEFB_0%,#FFFFFF_100%)]">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-xl md:text-3xl font-bold text-[#0264B8] mb-16 tracking-wide" data-aos="fade-up">
+        <h2 className="text-xl md:text-3xl font-bold text-[#2C7BBD] mb-16 tracking-wide" data-aos="fade-up">
           CAN'T FIND WHAT YOU'RE LOOKING FOR?
         </h2>
 

@@ -18,14 +18,11 @@ export default function PerksSection() {
     <section className="py-20 px-4 w-full bg-[linear-gradient(270deg,#D1EDFA_0%,#FFFFFF_100%)] items-center flex flex-col">
       <div className="text-center mb-16" data-aos="fade-up">
         <h2
-          className="text-4xl md:text-5xl font-bold mb-4"
-          style={{ color: "#0264B8", fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}
+          className="text-2xl md:text-4xl lg:text-5xl font-semibold uppercase"
+          style={{ color: "#2C7BBD", fontFamily: 'var(--font-conthrax)', letterSpacing: '0.01em' }}
         >
-          PERKS
-        </h2>
-        <p className="text-[#4a4a4a] text-lg">
           What we provide to our Employees
-        </p>
+        </h2>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">

@@ -26,7 +26,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className="w-full mb-20 relative">
-      <div className="bg-[#0264B8] py-4 text-center mb-12" data-aos="fade-up">
+      <div className="bg-[#2C7BBD] py-4 text-center mb-12" data-aos="fade-up">
         <h2
           className="text-3xl md:text-4xl font-bold text-white tracking-widest"
           style={{ fontFamily: "var(--font-bebas)", letterSpacing: "0.01em" }}

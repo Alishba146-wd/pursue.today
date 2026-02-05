@@ -21,7 +21,7 @@ export default function Careers() {
             data-aos="fade-up"
           >
             <span className="text-black not-italic">JOIN OUR </span>
-            <span className="text-[#0264B8]">TEAM</span>
+            <span className="text-[#2C7BBD]">TEAM</span>
           </h1>
 
           <p className="text-base md:text-xl text-black mb-8 max-w-2xl mx-auto font-medium opacity-90" data-aos="fade-up" data-aos-delay="100">
@@ -32,8 +32,8 @@ export default function Careers() {
             variant="outline"
             className="explore-btn rounded-full px-12 py-7 text-sm font-semibold hover:scale-105 transition-all mb-20"
             style={{
-              borderColor: "#0264B8",
-              color: "#0264B8",
+              borderColor: "#2C7BBD",
+              color: "#2C7BBD",
               backgroundColor: "transparent",
               borderWidth: "2px",
             }}

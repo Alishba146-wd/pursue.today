@@ -19,12 +19,12 @@ const images = [
 export default function ImageGallery() {
   return (
     <div className="w-full overflow-hidden" data-aos="fade-up">
-      <div className="flex animate-scroll-gallery">
+      <div className="flex w-max animate-scroll-gallery">
         {/* First set of images */}
         {images.map((src, index) => (
           <div
             key={index}
-            className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-3xl overflow-hidden shadow-lg flex-shrink-0 mx-3"
+            className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] rounded-3xl overflow-hidden shadow-lg flex-shrink-0 mx-2 md:mx-3"
           >
             <Image
               src={src}
@@ -38,7 +38,7 @@ export default function ImageGallery() {
         {images.map((src, index) => (
           <div
             key={`dup-${index}`}
-            className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-3xl overflow-hidden shadow-lg flex-shrink-0 mx-3"
+            className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] rounded-3xl overflow-hidden shadow-lg flex-shrink-0 mx-2 md:mx-3"
           >
             <Image
               src={src}
