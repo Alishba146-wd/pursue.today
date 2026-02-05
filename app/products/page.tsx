@@ -42,8 +42,8 @@ export default function ProductsPage() {
               >
                 GOCUSTOMER.AI
               </h3>
-              <p className="text-xl lg:text-2xl text-gray-700 mb-4 italic">
-                All-in-one AI to find, convert, and engage<br />
+              <p className="text-sm sm:text-base lg:text-2xl text-gray-700 mb-4 italic">
+                All-in-one AI to find, convert, and engage<br className="hidden sm:block" />
                 customers. Simple, powerful, no tech team.
               </p>
               <a
@@ -72,8 +72,8 @@ export default function ProductsPage() {
               >
                 MEETREP.AI
               </h3>
-              <p className="text-xl lg:text-2xl text-gray-700 mb-4 italic">
-                An AI agent that delivers live interactive product<br />
+              <p className="text-sm sm:text-base lg:text-2xl text-gray-700 mb-4 italic">
+                An AI agent that delivers live interactive product<br className="hidden sm:block" />
                 demos the moment a prospect clicks.
               </p>
               <a
