@@ -1,16 +1,16 @@
 import Image from "next/image";
 
 const perks = [
-  { title: "Health\nInsurance", icon: "/perk1.png" },
-  { title: "Quarterly\nFamily Treat", icon: "/perk2.png" },
-  { title: "Annual\nRetreats", icon: "/perk3.png" },
-  { title: "Yearly\nIncrements", icon: "/perk4.png" },
-  { title: "Tea on\nthe House", icon: "/perk5.png" },
-  { title: "Insane\nLearning", icon: "/perk6.png" },
-  { title: "Bi-annual\nBonuses", icon: "/perk7.png" },
-  { title: "Paid\nLeaves", icon: "/perk8.png" },
-  { title: "Indoor\nGaming", icon: "/perk9.png" },
-  { title: "Flexible\nWorking Hours", icon: "/perk10.png" },
+  { icon: "/perks/career [Recovered]-06.png" },
+  { icon: "/perks/career [Recovered]-07.png" },
+  { icon: "/perks/career [Recovered]-08.png" },
+  { icon: "/perks/career [Recovered]-09.png" },
+  { icon: "/perks/career [Recovered]-10.png" },
+  { icon: "/perks/career [Recovered]-11.png" },
+  { icon: "/perks/career [Recovered]-12.png" },
+  { icon: "/perks/career [Recovered]-13.png" },
+  { icon: "/perks/career [Recovered]-14.png" },
+  { icon: "/perks/career [Recovered]-15.png" },
 ];
 
 export default function PerksSection() {
@@ -18,8 +18,8 @@ export default function PerksSection() {
     <section className="py-20 px-4 w-full bg-[linear-gradient(270deg,#D1EDFA_0%,#FFFFFF_100%)] items-center flex flex-col">
       <div className="text-center mb-16" data-aos="fade-up">
         <h2
-          className="text-2xl md:text-4xl lg:text-5xl font-semibold uppercase"
-          style={{ color: "#2C7BBD", fontFamily: 'var(--font-conthrax)', letterSpacing: '0.01em' }}
+          className="text-3xl md:text-4xl lg:text-5xl font-semibold uppercase"
+          style={{ color: "#2C7BBD", fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}
         >
           What we provide to our Employees
         </h2>
@@ -40,7 +40,7 @@ export default function PerksSection() {
             <div className="w-20 h-20 md:w-32 md:h-40 lg:w-48 lg:h-48 relative">
               <Image
                 src={perk.icon}
-                alt={perk.title}
+                alt={`Perk ${index + 1}`}
                 fill
                 className="object-contain"
               />
