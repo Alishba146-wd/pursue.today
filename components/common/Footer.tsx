@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 function LazyMap() {
@@ -40,6 +42,14 @@ function LazyMap() {
 }
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const quickLinks = [
+    { href: '/about', label: 'About' },
+    { href: '/products', label: 'Products' },
+    { href: '/services', label: 'Services' },
+  ];
+
   return (
     <footer className="text-white py-16" style={{ backgroundColor: '#00213A' }}>
       <div className="max-w-7xl mx-auto px-6">
@@ -65,9 +75,15 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Quick Links</h3>
             <div className="space-y-3">
-              <a href="#about" className="block text-gray-300 hover:text-white transition font-medium">About</a>
-              <a href="#products" className="block text-gray-300 hover:text-white transition font-medium">Products</a>
-              <a href="#services" className="block text-gray-300 hover:text-white transition font-medium">Services</a>
+              {quickLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`block font-medium transition ${pathname === href ? 'text-white underline underline-offset-4 decoration-2' : 'text-gray-300 hover:text-white'}`}
+                >
+                  {label}
+                </Link>
+              ))}
               <a href="#privacy" className="block text-gray-300 hover:text-white transition font-medium">Privacy Policy</a>
               <a href="#terms" className="block text-gray-300 hover:text-white transition font-medium">Terms & Conditions</a>
             </div>
