@@ -9,11 +9,11 @@ export default function InfoSection() {
       <div className="max-w-5xl mx-auto">
         {/* Text heading for mobile */}
         <h2
-          className="block sm:hidden text-lg font-semibold text-white mb-6 uppercase leading-tight"
+          className="block sm:hidden text-lg font-semibold text-white mb-6 leading-tight"
           style={{ fontFamily: 'var(--font-conthrax)', letterSpacing: '0.03em' }}
           data-aos="fade-up"
         >
-          WORKING AT PURSUE TODAY MEANS FLEXIBILITY, GROWTH AND MEANINGFUL CHOICES.
+          Working At Pursue Today Means Flexibility, Growth And Meaningful Choices.
         </h2>
 
         {/* Image heading for tablet and desktop */}

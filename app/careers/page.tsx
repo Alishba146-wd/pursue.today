@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/common/button";
 import ImageGallery from "@/components/careers/ImageGallery";
 import ScrollingTicker from "@/components/common/ScrollingTicker";
@@ -28,20 +29,22 @@ export default function Careers() {
             Take a step in the right direction for your career
           </p>
 
-          <Button
-            variant="outline"
-            className="explore-btn rounded-full px-12 py-7 text-sm font-semibold hover:scale-105 transition-all mb-20"
-            style={{
-              borderColor: "#2C7BBD",
-              color: "#2C7BBD",
-              backgroundColor: "transparent",
-              borderWidth: "2px",
-            }}
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            See Open Roles
-          </Button>
+          <Link href="/careers/open-roles">
+            <Button
+              variant="outline"
+              className="explore-btn rounded-full px-12 py-7 text-sm font-semibold hover:scale-105 transition-all mb-20"
+              style={{
+                borderColor: "#2C7BBD",
+                color: "#2C7BBD",
+                backgroundColor: "transparent",
+                borderWidth: "2px",
+              }}
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              See Open Roles
+            </Button>
+          </Link>
 
           <ImageGallery />
         </div>
